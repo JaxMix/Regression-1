@@ -1,6 +1,6 @@
 ---
 title: "Regression-1"
-author: "Vicki Hertzberg"
+author: "Jacqueline Mix"
 date: "February 8, 2017"
 output: html_document
 ---
@@ -114,9 +114,9 @@ Now let's look at the residual plots:
 
 ```{r}
 #set up the 0 line
-x0 <- 64
-parent <- seq(x0, 73, 0.01)
-resid <- rep(0, length(parent))
+#x0 <- 64
+#parent <- seq(x0, 73, 0.01)
+#resid <- rep(0, length(parent))
 
 #plot residual versus X
 plot(resid~parent, data = Galton.test)
@@ -267,7 +267,7 @@ We can compare the results of these two analyses a little more cleanly using the
 
 ```{r results="asis"}
 # compare the results of the two regression models
-stargazer(prestige.mod1,prestige.mod2,title="Comparison of 2 Regression outputs",type="html",align=TRUE)
+stargazer(prestige.mod1,prestige.mod2,title="Comparison of 2 Regression outputs",type="text",align=TRUE)
 ```
 
 We conclude that we lose little by eliminating a predictor variable. This is also consistent with a principle of parsimony, also known as the KISS principle, or "Keep It Simple, Silly".
